@@ -20,7 +20,7 @@ services:
     image: postgres:12
     container_name: joao-ifsp-pgsql
     restart: always
-    enviroment:
+    environment:
       POSTGRES_PASSWORD: postdba
       POSTGRES_USER: postgres
     ports:
@@ -33,7 +33,7 @@ services:
   pgadmin:
     image: dpage/pgadmin4
     container-name: joao-ifsp-pgadmin
-    enviroment:
+    environment:
       PGADMIN_DEFAULT_EMAIL: postgres@servidor.com
       PGADMIN_DEFAULT_PASSWORD: postdba
     ports:
@@ -51,7 +51,7 @@ services:
       - ./mysql:/var/lib/mysql
     ports:
       - "3306:3306"
-    enviroment:
+    environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: teste
     networks:
@@ -70,7 +70,7 @@ services:
       - "8080:80"
     links:
       - mysql
-    enviroment:
+    environment:
       PMA_ARBITRARY: 0
       PMA_HOST: mysql
     networks:
