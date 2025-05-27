@@ -32,7 +32,7 @@ services:
 
   pgadmin:
     image: dpage/pgadmin4
-    container-name: joao-ifsp-pgadmin
+    container_name: joao-ifsp-pgadmin
     environment:
       PGADMIN_DEFAULT_EMAIL: postgres@servidor.com
       PGADMIN_DEFAULT_PASSWORD: postdba
